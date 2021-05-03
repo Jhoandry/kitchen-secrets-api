@@ -6,7 +6,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import ListGroup from 'react-bootstrap/ListGroup'
 import InputGroup from 'react-bootstrap/InputGroup'
 
-const RecipeDeatil= (recipe) => {
+const RecipeDeatil = (recipe) => {
     return (
       <>
       <div>
