@@ -1,0 +1,44 @@
+.container {
+    margin-top: 10% !important; 
+}
+
+.container .left {
+    text-align: left;
+}
+
+.container a {
+    font-style: italic;
+    font-weight: bold;
+    color: #fe6b59;
+    padding-left: 10px;
+}
+
+.container table {
+    margin-top: 5%;
+    width: 90%;
+}
+
+.table thead th  {
+    border-bottom: 1px solid #FEBD59 !important;
+    border-top: white;
+    border-style:unset;
+    background-color: white;
+    color: #FEBD59;
+}
+
+.table td  {
+    border-bottom: 1px solid #febc5998 !important;
+    border-top: white;
+    background-color: white;
+}
+
+.form-inline .form-control {
+    width: 90% !important;
+    color: #fe6b59 !important;
+    border: 1px solid #FEBD59;
+    border-radius: 1rem;
+}
+
+.form-inline img {
+    max-width: 5% !important;
+}

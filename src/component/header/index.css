@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #FEBD59 !important;
+    width: 100%;
+}
+.navbar img {
+    max-width: 10% !important; }
+
+.navbar label {
+    margin-top: 20px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.navbar-collapse {
+    margin-right: 15%;
+}
+
+.title {
+    font-size: 26px !important;
+    font-style: italic;
+}
