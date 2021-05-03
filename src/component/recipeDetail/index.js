@@ -11,8 +11,9 @@ const RecipeDeatil= (recipe) => {
       <>
       <div>
         <Container>
+        <h2>Kitchen Recipe</h2>
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-            <Tab eventKey="home" title="Home">
+            <Tab eventKey="detail" title="Detail">
                 <div className="description-continer">
                     <h3>Name: </h3>
                     <label>description: </label>

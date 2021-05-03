@@ -12,7 +12,7 @@ const Header = () => {
                     src={logo}
                     className="d-inline-block align-top img-fluid"
                     alt="Kitchen recipes"/>
-                <label className="title"> Kitchen Recipes by Jhoa </label>
+                <label className="title"> Kitchen Secret's by Jhoa </label>
             </Navbar.Brand>
         </Navbar>
       </>

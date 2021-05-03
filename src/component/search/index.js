@@ -2,7 +2,6 @@ import React from 'react'
 import "./index.css"
 import { Container, Form, FormControl } from 'react-bootstrap'
 import search from "../../img/search.png"
-import RecipeDeatil from './../recipeDetail/index'
 
 const Search = () => {
     return (
@@ -16,9 +15,6 @@ const Search = () => {
             <div className="left">
               <a href="url">See Scoring</a>
             </div>
-
-          <RecipeDeatil/>
-
         </Container>
       </div>
       </>

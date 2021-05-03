@@ -1,6 +1,6 @@
 import React from 'react'
 import "./index.css"
-import Container from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 
 const RecipeList = (recipes) => {
@@ -8,6 +8,7 @@ const RecipeList = (recipes) => {
     <>
     <div>
       <Container>
+        <h2>Kitchen Recipes</h2>
         <Table>
           <thead>
             <tr>
