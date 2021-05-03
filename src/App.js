@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from './component/header/index'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-         Hellow SCV!
-        </p>
-      </header>
+        <Header/>
     </div>
   );
 }
