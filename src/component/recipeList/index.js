@@ -6,7 +6,7 @@ const RecipeList = (data) => {
   if (Array.isArray(data.recipes) && data.recipes.length > 0) {
     return (
       <>
-      <div>
+      <div className="list-container">
         <Table>
           <thead>
             <tr>
@@ -31,7 +31,7 @@ const RecipeList = (data) => {
   } else {
     return (
       <>
-      <div>
+      <div className="list-container">
         <h4>No data Available</h4>
       </div>
       </>);

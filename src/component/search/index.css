@@ -7,10 +7,11 @@
     font-weight: bold;
     color: #fe6b59;
     padding-left: 10px;
+    align-items: center;
 }
 
 .form-inline .form-control {
-    width: 90% !important;
+    width: 100% !important;
     color: #fe6b59 !important;
     border: 1px solid #FEBD59;
     border-radius: 1rem;

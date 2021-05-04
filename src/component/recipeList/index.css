@@ -3,7 +3,13 @@
 }
 
 .container table {
-    width: 90%;
+    width: 100%;
+}
+
+.list-container {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 5%;
 }
 
 .table thead th  {
@@ -11,7 +17,7 @@
     border-top: white;
     border-style:unset;
     background-color: white;
-    color: #FEBD59;
+    color: #fe6b59;
 }
 
 .table td  {
