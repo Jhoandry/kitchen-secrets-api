@@ -1,0 +1,23 @@
+.select-score {
+    margin-left: 1% !important;
+    width: 5% !important;
+}
+
+h5 {
+    margin-left: 2% !important;
+    color: #ab2d0b;
+}
+
+.form-inline img {
+    max-width: 3% !important;
+}
+
+.form-inline img:active {
+    width: 2% !important;
+}
+
+button {
+    background: #febd59 !important;
+    border-color: #febd59 !important;
+    border-radius: .7rem !important;
+}
