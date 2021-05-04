@@ -7,12 +7,8 @@ h1, h3, h4 {
     color: #ab2d0b;
 }
 
-.nowrap {
-    white-space: nowrap !important;
-}
-
 .detail {
-    color: #929396 !important;
+    color: #6f6f6f !important;
 }
 
 .list-tittle {
@@ -27,6 +23,9 @@ h1, h3, h4 {
 input {
     width: 5% !important;
     margin: 2%;
+    color: #ab2d0b;
+    border-radius: .25rem;
+    border: 1px solid #ab2d0b;
 }
 
 .col-md-3, .col-md-2 {

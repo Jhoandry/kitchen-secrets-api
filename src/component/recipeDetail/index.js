@@ -8,12 +8,21 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Form from 'react-bootstrap/Form'
 import { recipeById } from './../../client/execution'
 
+function isArrayNotEmpty(element) {
+    return !!element && Array.isArray(element) && element.length > 0;
+}
+
+function getPortion(element, portions) {
+    return element * portions
+}
+
 const RecipeDeatil = () => {
 
     const {id} = useParams();
     const [recipe, setData] = useState({});
     const [loading, setLoading] = useState(false);
-  
+    const [portions, setPortions] = useState(1);
+
     useEffect(() => {
         setLoading(true)
         recipeById(id)
@@ -37,19 +46,22 @@ const RecipeDeatil = () => {
                             <div> 
                                 <h3>Name: {recipe.name}</h3>
                                 <label className="detail">description: {recipe.description}</label>
-
-                                <h4 className="list-tittle">
+                                
+                                <h4>
                                     Calculate ingredients for
-                                    <input type="number" placeholder="1"/>
-                                    Personas
+                                    <input  type="number" 
+                                            placeholder={portions} 
+                                            min="1"
+                                            onChange={ number => setPortions(number.target.value) }/>
+                                    people
                                 </h4>
 
                                 <ListGroup>
-                                    {   (!!recipe && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0) ? 
+                                    { !!recipe && isArrayNotEmpty(recipe.ingredients) ? 
                                             recipe.ingredients.map((ingredient) => {
                                                 return (
                                                     <ListGroup.Item>
-                                                        <b className="detail">- {ingredient.basePortion} {ingredient.unit}</b> 
+                                                        <b className="detail">- {getPortion(ingredient.basePortion, portions)} {ingredient.unit}</b> 
                                                         <pr className="detail"> {ingredient.name} </pr>
                                                     </ListGroup.Item>
                                                 );
@@ -69,7 +81,7 @@ const RecipeDeatil = () => {
                             <div>
                                 <h3>Steps </h3>
                                 <ListGroup>
-                                    {   (!!recipe && Array.isArray(recipe.steps) && recipe.steps.length > 0) ? 
+                                    {   !!recipe && isArrayNotEmpty(recipe.steps)? 
                                             recipe.steps.map((step) => {
                                                 return (
                                                     <ListGroup.Item>
@@ -92,7 +104,7 @@ const RecipeDeatil = () => {
                             <div>
                                 <h3>Steps </h3>
                                 <ListGroup>
-                                    {   (!!recipe && Array.isArray(recipe.steps) && recipe.steps.length > 0) ? 
+                                    {   !!recipe && isArrayNotEmpty(recipe.steps) ? 
                                             recipe.steps.map((step) => {
                                                 return (
                                                     <ListGroup.Item>
