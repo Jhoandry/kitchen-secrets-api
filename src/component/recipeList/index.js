@@ -1,13 +1,12 @@
 import React from 'react'
 import "./index.css"
-import {Container} from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 
 const RecipeList = (data) => {
-  console.log(data);
-  return (
-    <>
-    <div>
+  if (Array.isArray(data.recipes) && data.recipes.length > 0) {
+    return (
+      <>
+      <div>
         <Table>
           <thead>
             <tr>
@@ -16,14 +15,27 @@ const RecipeList = (data) => {
             </tr>
           </thead>
           <tbody>
-            {/* {!!data ? data.recipes.map((recipe) => { 
-              console.log(recipe);
-            }) : <></>} */}
+            {data.recipes.map((recipe) => {
+              return (
+                <tr>
+                  <td>{recipe.name}</td>
+                  <td>{recipe.averageScore}</td>
+                </tr> 
+              );
+            })}
           </tbody>
         </Table>
-    </div>
-    </>
-  );
+      </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+      <div>
+        <h4>No data Available</h4>
+      </div>
+      </>);
+  }
 };
 
 export default RecipeList

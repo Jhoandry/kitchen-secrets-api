@@ -8,20 +8,18 @@ import RecipeList from './../recipeList/index'
 
 
 const ScoreDetail = () => {
-  const [betters, setBettersData] = useState({});
+  const [betters, setBettersData] = useState([]);
   const [worstes, setWorstesData] = useState({});
 
   useEffect(() => {
     getBetters()
-      .then((data) => setBettersData(data))
+      .then((data) => setBettersData(data.getBetters))
       .catch((err) => console.log(err));
-  });
 
-  useEffect(() => {
     getWorstes()
-      .then((data) => setWorstesData(data))
+      .then((data) => setWorstesData(data.getWorstes))
       .catch((err) => console.log(err));
-  });
+  },[]);
 
   return (
     <>
@@ -36,7 +34,7 @@ const ScoreDetail = () => {
             </Tab>
             <Tab eventKey="worstes" title="Worstes">
               <div className="description-continer">
-                {/* <RecipeList recipes={data2}/> */}
+                <RecipeList recipes={worstes}/>
               </div>
             </Tab>
         </Tabs>
