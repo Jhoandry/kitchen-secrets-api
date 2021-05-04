@@ -25,7 +25,7 @@ const ScoreDetail = () => {
     <div>
       <Container>
         <h2>Kitchen Recipes</h2>
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+        <Tabs defaultActiveKey="betters">
             <Tab eventKey="betters" title="Betters">
               <RecipeList data={betters}/>
             </Tab>

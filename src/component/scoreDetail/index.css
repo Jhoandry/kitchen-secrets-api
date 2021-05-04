@@ -2,6 +2,10 @@
     margin-top: 10% !important; 
 }
 
+.list-container {
+    padding: 5%;
+}
+
 .nav-tabs .nav-link {
     color: #fe6b59 !important;
 }

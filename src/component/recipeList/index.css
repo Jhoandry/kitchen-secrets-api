@@ -6,6 +6,12 @@
     width: 100%;
 }
 
+.link {
+    color: #6f6f6f !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+}
+
 .list-container {
     padding-left: 2%;
     padding-right: 2%;

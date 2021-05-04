@@ -38,7 +38,7 @@ const RecipeDeatil = () => {
       <div>
         <Container>
             <h1>Kitchen Recipe</h1>
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+            <Tabs defaultActiveKey="detail">
                 <Tab eventKey="detail" title="Detail">
                     <div className="description-continer">
                         {loading ?  
@@ -102,14 +102,14 @@ const RecipeDeatil = () => {
                         {loading ?  
                             <pr> Loading data...</pr> :
                             <div>
-                                <h3>Steps </h3>
+                                <h3>Curiosities </h3>
                                 <ListGroup>
-                                    {   !!recipe && isArrayNotEmpty(recipe.steps) ? 
-                                            recipe.steps.map((step) => {
+                                    {   !!recipe && isArrayNotEmpty(recipe.curiosities) ? 
+                                            recipe.curiosities.map((element) => {
                                                 return (
                                                     <ListGroup.Item>
-                                                        <b className="detail">- {step.order} </b> 
-                                                        <pr className="detail"> {step.description} </pr>
+                                                        <b className="detail">- </b> 
+                                                        <pr className="detail"> {element} </pr>
                                                     </ListGroup.Item>
                                                 );
                                             }) : 

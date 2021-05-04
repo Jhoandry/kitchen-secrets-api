@@ -20,7 +20,7 @@ const RecipeList = (data) => {
               return (
                 <tr>
                   <td>
-                    <Link to={`/recipe/${recipe._id}`}>{recipe.name}</Link>
+                    <Link className="link" to={`/recipe/${recipe._id}`}>{recipe.name}</Link>
                   </td>
                   <td>{recipe.averageScore}</td>
                 </tr> 

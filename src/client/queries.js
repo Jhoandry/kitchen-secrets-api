@@ -28,6 +28,7 @@ const RecipeByIdQuery = (id) => gql`
         name
         description
         averageScore
+        curiosities
         steps {
           description,
           order
