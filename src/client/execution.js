@@ -2,19 +2,35 @@ import { request } from 'graphql-request'
 import {  RecipesQuery, 
           RecipesByFilterQuery, 
           RecipeByIdQuery, 
-          bettersQuery, 
-          worstesQuery} from './queries'
+          BettersQuery, 
+          WorstesQuery} from './queries'
 
 const URL = 'http://localhost:4000/graphql';
 
-const RecipeList = () => {
-  request(URL, RecipesQuery).then((data) => console.log(data))
+const recipeList = () => {
+  return request(URL, RecipesQuery)
 }
 
-const RecipeListByFilter = (filter) => {
-  request(URL, RecipesByFilterQuery(filter)).then((data) => console.log(data))
+const recipeListByFilter = (filter) => {
+  return request(URL, RecipesByFilterQuery(filter))
 }
 
-export {RecipeList, RecipeListByFilter};
+const recipeById = (id) => {
+  return request(URL, RecipeByIdQuery(id))
+}
+
+const getBetters = () => {
+  return request(URL, BettersQuery)
+}
+
+const getWorstes = () => {
+  return request(URL, WorstesQuery)
+}
+
+export {  recipeList, 
+          recipeListByFilter,
+          recipeById,
+          getBetters,
+          getWorstes };
 
 

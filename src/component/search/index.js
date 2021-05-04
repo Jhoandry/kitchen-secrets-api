@@ -8,13 +8,10 @@ const Search = () => {
       <>
       <div>
         <Container>
-            <Form inline>
-              <FormControl type="text" placeholder="Find kitchen Recipe" className="mr-sm-2" />
-              <img src={search} variant="outline-success"/>
-            </Form>
-            <div className="left">
-              <a href="url">See Scoring</a>
-            </div>
+          <Form inline>
+            <FormControl type="text" placeholder="Find kitchen Recipe" className="mr-sm-2" />
+            <img src={search} variant="outline-success"/>
+          </Form>
         </Container>
       </div>
       </>

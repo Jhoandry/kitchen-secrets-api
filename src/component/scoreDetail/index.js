@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./index.css"
 import {Container} from 'react-bootstrap'
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
-import Table from 'react-bootstrap/Table'
+import { getBetters, getWorstes } from './../../client/execution'
+import RecipeList from './../recipeList/index'
 
-const ScoreDetail = (recipes) => {
+
+const ScoreDetail = () => {
+  const [betters, setBettersData] = useState({});
+  const [worstes, setWorstesData] = useState({});
+
+  useEffect(() => {
+    getBetters()
+      .then((data) => setBettersData(data))
+      .catch((err) => console.log(err));
+  });
+
+  useEffect(() => {
+    getWorstes()
+      .then((data) => setWorstesData(data))
+      .catch((err) => console.log(err));
+  });
+
   return (
     <>
     <div>
@@ -14,30 +31,12 @@ const ScoreDetail = (recipes) => {
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
             <Tab eventKey="betters" title="Betters">
               <div className="description-continer">
-                <Table>
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Average Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </Table>
+                <RecipeList data={betters}/>
               </div>
             </Tab>
             <Tab eventKey="worstes" title="Worstes">
               <div className="description-continer">
-                <Table>
-                  <thead>
-                    <tr>
-                      <th>Recipe Name</th>
-                      <th>Average Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  </tbody>
-                </Table>
+                {/* <RecipeList recipes={data2}/> */}
               </div>
             </Tab>
         </Tabs>

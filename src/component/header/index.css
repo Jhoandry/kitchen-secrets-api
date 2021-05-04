@@ -3,7 +3,7 @@
     width: 100%;
 }
 .navbar img {
-    max-width: 10% !important; }
+    max-width: 7% !important; }
 
 .navbar label {
     margin-top: 20px;
@@ -18,4 +18,13 @@
 .title {
     font-size: 26px !important;
     font-style: italic;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link:active, .nav-link:hover, .active {
+    color: #fe6b59 !important;
 }

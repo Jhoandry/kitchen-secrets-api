@@ -3,12 +3,11 @@ import "./index.css"
 import {Container} from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 
-const RecipeList = (recipes) => {
+const RecipeList = (data) => {
+  console.log(data);
   return (
     <>
     <div>
-      <Container>
-        <h2>Kitchen Recipes</h2>
         <Table>
           <thead>
             <tr>
@@ -17,9 +16,11 @@ const RecipeList = (recipes) => {
             </tr>
           </thead>
           <tbody>
+            {/* {!!data ? data.recipes.map((recipe) => { 
+              console.log(recipe);
+            }) : <></>} */}
           </tbody>
         </Table>
-      </Container>
     </div>
     </>
   );

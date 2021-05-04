@@ -12,16 +12,6 @@
     padding-top: 5%;
 }
 
-.table thead th  {
-    border-bottom: 1px solid #FEBD59 !important;
-    border-top: white;
-    border-style:unset;
-    background-color: white;
-    color: #FEBD59;
-}
-
-.table td  {
-    border-bottom: 1px solid #febc5998 !important;
-    border-top: white;
-    background-color: white;
+.nav-tabs .nav-link {
+    color: #fe6b59 !important;
 }

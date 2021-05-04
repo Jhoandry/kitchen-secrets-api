@@ -41,7 +41,7 @@ const RecipeByIdQuery = (id) => gql`
   }
 `;
 
-const bettersQuery = gql`
+const BettersQuery = gql`
   {
     getBetters {
       _id 
@@ -51,7 +51,7 @@ const bettersQuery = gql`
   }
 `;
 
-const worstesQuery = gql`
+const WorstesQuery = gql`
   {
     getWorstes {
       _id 
@@ -64,7 +64,7 @@ const worstesQuery = gql`
 export {  RecipesQuery, 
           RecipesByFilterQuery, 
           RecipeByIdQuery, 
-          bettersQuery, 
-          worstesQuery};
+          BettersQuery, 
+          WorstesQuery };
 
  
