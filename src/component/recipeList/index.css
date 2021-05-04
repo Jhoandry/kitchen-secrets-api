@@ -27,6 +27,7 @@
 }
 
 .table td  {
+    color: #6f6f6f !important;
     border-bottom: 1px solid #febc5998 !important;
     border-top: white;
     background-color: white;

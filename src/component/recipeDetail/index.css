@@ -33,6 +33,10 @@ input {
     padding-left: 0% !important;
 }
 
+.tab-content {
+    margin-bottom: 3%;
+}
+
 .tab-content>.active {
     border-left: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6;

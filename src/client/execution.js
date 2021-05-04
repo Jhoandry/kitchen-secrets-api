@@ -4,6 +4,7 @@ import {  RecipesQuery,
           RecipeByIdQuery, 
           BettersQuery, 
           WorstesQuery} from './queries'
+import { sendScore } from './mutations'
 
 const URL = 'http://localhost:4000/graphql';
 
@@ -27,10 +28,15 @@ const getWorstes = () => {
   return request(URL, WorstesQuery)
 }
 
+const sendScoreById = (id, score) => {
+  return request(URL, sendScore(id, score))
+}
+
 export {  recipeList, 
           recipeListByFilter,
           recipeById,
           getBetters,
-          getWorstes };
+          getWorstes,
+          sendScoreById };
 
 

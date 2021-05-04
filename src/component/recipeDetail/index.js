@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./index.css"
-import { Container, FormControl, Row, Col} from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { useParams } from 'react-router-dom';
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import ListGroup from 'react-bootstrap/ListGroup'
-import Form from 'react-bootstrap/Form'
 import { recipeById } from './../../client/execution'
+import Score from './../score/index'
 
 function isArrayNotEmpty(element) {
     return !!element && Array.isArray(element) && element.length > 0;
@@ -121,6 +121,7 @@ const RecipeDeatil = () => {
                     </div>
                 </Tab>
             </Tabs>
+            <Score/>
         </Container>
       </div>
       </>

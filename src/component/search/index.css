@@ -10,17 +10,12 @@
     align-items: center;
 }
 
-.form-inline .form-control {
+.search-input {
     width: 100% !important;
+}
+
+.form-inline .form-control {
     color: #fe6b59 !important;
     border: 1px solid #FEBD59;
     border-radius: 1rem;
-}
-
-.form-inline img {
-    max-width: 3% !important;
-}
-
-.form-inline img:active {
-    width: 2% !important;
 }

@@ -29,7 +29,7 @@ const Search = () => {
     <div>
       <Container>
         <Form inline>
-          <FormControl  type="text" className="mr-sm-2" 
+          <FormControl  type="text" className="search-input mr-sm-2" 
                         placeholder="Find kitchen Recipe" 
                         onChange={ filter => setSearch(filter.target.value) }/>
         </Form>
