@@ -3,6 +3,18 @@
     text-align: left;
 }
 
+h1, h3, h4 {
+    color: #ab2d0b;
+}
+
+.nowrap {
+    white-space: nowrap !important;
+}
+
+.detail {
+    color: #929396 !important;
+}
+
 .list-tittle {
     margin-top: 5%;
 }
@@ -12,11 +24,20 @@
 
 }
 
-.input-group {
-    margin-top: 12% !important;
+input {
+    width: 5% !important;
+    margin: 2%;
 }
 
 .col-md-3, .col-md-2 {
     padding-right: 0% !important;
     padding-left: 0% !important;
+}
+
+.tab-content>.active {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
 }

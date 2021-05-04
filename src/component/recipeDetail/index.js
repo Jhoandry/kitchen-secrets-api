@@ -5,73 +5,110 @@ import { useParams } from 'react-router-dom';
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import ListGroup from 'react-bootstrap/ListGroup'
-import InputGroup from 'react-bootstrap/InputGroup'
+import Form from 'react-bootstrap/Form'
 import { recipeById } from './../../client/execution'
 
 const RecipeDeatil = () => {
 
     const {id} = useParams();
     const [recipe, setData] = useState({});
+    const [loading, setLoading] = useState(false);
   
-    useEffect(() => { //find once better and worste list
+    useEffect(() => {
+        setLoading(true)
         recipeById(id)
             .then((data) => {
-                console.log(data.getDetailByRecipeId);
                 setData(data.getDetailByRecipeId)
+                setLoading(false)
             })
             .catch((err) => console.log(err));
-    },{});
+    },[]);
 
     return (
       <>
       <div>
         <Container>
-        <h2>Kitchen Recipe</h2>
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-            <Tab eventKey="detail" title="Detail">
-                <div className="description-continer">
-                    <h3>Name: {recipe.name}</h3>
-                    <label>description: {recipe.description}</label>
+            <h1>Kitchen Recipe</h1>
+            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                <Tab eventKey="detail" title="Detail">
+                    <div className="description-continer">
+                        {loading ?  
+                            <pr> Loading data...</pr> :
+                            <div> 
+                                <h3>Name: {recipe.name}</h3>
+                                <label className="detail">description: {recipe.description}</label>
 
-                    <Row>
-                        <Col md={4}>
-                            <h4 className="list-tittle">Calculate ingredients for </h4>
-                        </Col>
-                        <Col md={2}>
-                            <InputGroup size="sm" className="mb-3">
-                                <FormControl aria-label="Small" aria-describedby="inputGroup-sizing-sm"  placeholder="1" />
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="inputGroup-sizing-sm">People</InputGroup.Text>
-                                </InputGroup.Prepend>
-                            </InputGroup>
-                        </Col>
-                    </Row>
-                    
-                    
-                    <ListGroup>
-                        <ListGroup.Item>item1 </ListGroup.Item>
-                    </ListGroup>
+                                <h4 className="list-tittle">
+                                    Calculate ingredients for
+                                    <input type="number" placeholder="1"/>
+                                    Personas
+                                </h4>
 
-                </div>
+                                <ListGroup>
+                                    {   (!!recipe && Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0) ? 
+                                            recipe.ingredients.map((ingredient) => {
+                                                return (
+                                                    <ListGroup.Item>
+                                                        <b className="detail">- {ingredient.basePortion} {ingredient.unit}</b> 
+                                                        <pr className="detail"> {ingredient.name} </pr>
+                                                    </ListGroup.Item>
+                                                );
+                                            }) : 
+                                            <ListGroup.Item/>
+                                    }
+                                </ListGroup>
+                            </div> 
+                        }
+                    </div>
 
-            </Tab>
-            <Tab eventKey="steps" title="Steps">
-                <div className="description-continer">
-                    <h5>Steps </h5>
-                    <ListGroup>
-                        <ListGroup.Item>item1 </ListGroup.Item>
-                    </ListGroup>
-                </div>
-            </Tab>
-            <Tab eventKey="curiosities" title="Curiosities">
-                <div className="description-continer">
-                    <h5>Curiosities </h5>
-                    <ListGroup>
-                        <ListGroup.Item>item1 </ListGroup.Item>
-                    </ListGroup>
-                </div>
-            </Tab>
-        </Tabs>
+                </Tab>
+                <Tab eventKey="steps" title="Steps">
+                    <div className="description-continer">
+                        {loading ?  
+                            <pr> Loading data...</pr> :
+                            <div>
+                                <h3>Steps </h3>
+                                <ListGroup>
+                                    {   (!!recipe && Array.isArray(recipe.steps) && recipe.steps.length > 0) ? 
+                                            recipe.steps.map((step) => {
+                                                return (
+                                                    <ListGroup.Item>
+                                                        <b className="detail">- {step.order} </b> 
+                                                        <pr className="detail"> {step.description} </pr>
+                                                    </ListGroup.Item>
+                                                );
+                                            }) : 
+                                            <ListGroup.Item/>
+                                    }
+                                </ListGroup>
+                            </div>
+                        }
+                    </div>
+                </Tab>
+                <Tab eventKey="curiosities" title="Curiosities">
+                    <div className="description-continer">
+                        {loading ?  
+                            <pr> Loading data...</pr> :
+                            <div>
+                                <h3>Steps </h3>
+                                <ListGroup>
+                                    {   (!!recipe && Array.isArray(recipe.steps) && recipe.steps.length > 0) ? 
+                                            recipe.steps.map((step) => {
+                                                return (
+                                                    <ListGroup.Item>
+                                                        <b className="detail">- {step.order} </b> 
+                                                        <pr className="detail"> {step.description} </pr>
+                                                    </ListGroup.Item>
+                                                );
+                                            }) : 
+                                            <ListGroup.Item/>
+                                    }
+                                </ListGroup>
+                            </div>
+                        }
+                    </div>
+                </Tab>
+            </Tabs>
         </Container>
       </div>
       </>
