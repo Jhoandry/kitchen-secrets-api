@@ -1,5 +1,6 @@
 import React from 'react'
 import "./index.css"
+import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table'
 
 const RecipeList = (data) => {
@@ -18,7 +19,9 @@ const RecipeList = (data) => {
             {data.recipes.map((recipe) => {
               return (
                 <tr>
-                  <td>{recipe.name}</td>
+                  <td>
+                    <Link to={`/recipe/${recipe._id}`}>{recipe.name}</Link>
+                  </td>
                   <td>{recipe.averageScore}</td>
                 </tr> 
               );

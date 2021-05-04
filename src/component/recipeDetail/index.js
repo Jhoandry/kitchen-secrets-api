@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./index.css"
 import { Container, FormControl, Row, Col} from 'react-bootstrap'
+import { useParams } from 'react-router-dom';
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import ListGroup from 'react-bootstrap/ListGroup'
 import InputGroup from 'react-bootstrap/InputGroup'
+import { recipeById } from './../../client/execution'
 
-const RecipeDeatil = (recipe) => {
+const RecipeDeatil = () => {
+
+    const {id} = useParams();
+    const [recipe, setData] = useState({});
+  
+    useEffect(() => { //find once better and worste list
+        recipeById(id)
+            .then((data) => {
+                console.log(data.getDetailByRecipeId);
+                setData(data.getDetailByRecipeId)
+            })
+            .catch((err) => console.log(err));
+    },{});
+
     return (
       <>
       <div>
@@ -15,8 +30,8 @@ const RecipeDeatil = (recipe) => {
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
             <Tab eventKey="detail" title="Detail">
                 <div className="description-continer">
-                    <h3>Name: </h3>
-                    <label>description: </label>
+                    <h3>Name: {recipe.name}</h3>
+                    <label>description: {recipe.description}</label>
 
                     <Row>
                         <Col md={4}>

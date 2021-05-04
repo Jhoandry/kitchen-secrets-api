@@ -15,7 +15,7 @@ const Header = () => {
                 <label className="title"> Kitchen Secret's by Jhoa </label>
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-                <Nav defaultActiveKey="/home">
+                <Nav>
                     <Nav.Link href="/home" eventKey="/home">Home</Nav.Link>
                     <Nav.Link href="/scores" eventKey="/scores">Scores</Nav.Link>
                 </Nav>
