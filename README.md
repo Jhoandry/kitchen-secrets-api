@@ -24,14 +24,19 @@ React web app bootstrapped with this [Guide](https://github.com/facebook/create-
 
 ### To Start on you local machine
 
-Clone down this repository. You will need [npm](https://www.npmjs.com/) and [node](https://www.npmjs.com/package//node) installed globally on your machine. 
+You will need [npm](https://www.npmjs.com/) and [node](https://www.npmjs.com/package//node) installed globally on your machine. 
+
+Clone down this repository: `git clone https://github.com/Jhoandry/kitchen-secrets-api.git`
+
+Go to folder: `cd /kitchen-secrets-api`
 
 Installation: `npm install` 
 
 To Start Server: `npm start`   
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.  
+
 
 **🚨 IMPORTANT**
 
