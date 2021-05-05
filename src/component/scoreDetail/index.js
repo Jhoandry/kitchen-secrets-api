@@ -8,15 +8,25 @@ import RecipeList from './../recipeList/index'
 
 const ScoreDetail = () => {
   const [betters, setBettersData] = useState([]);
-  const [worstes, setWorstesData] = useState({});
+  const [worstes, setWorstesData] = useState([]);
+
+  const [loadingBetter, setLoadingBetter] = useState(true);
+  const [loadingWorstes, setLoadingWorste] = useState(true);
 
   useEffect(() => { //find once better and worste list
-    getBetters()
-      .then((data) => setBettersData(data.getBetters))
-      .catch((err) => console.log(err));
 
     getWorstes()
-      .then((data) => setWorstesData(data.getWorstes))
+    .then((data) => {
+      setWorstesData(data.getWorstes)
+      setLoadingWorste(false)
+    })
+    .catch((err) => console.log(err));
+
+    getBetters()
+      .then((data) => {
+        setBettersData(data.getBetters)
+        setLoadingBetter(false)
+      })
       .catch((err) => console.log(err));
   },[]);
 
@@ -27,13 +37,20 @@ const ScoreDetail = () => {
         <h2>Kitchen Recipes</h2>
         <Tabs defaultActiveKey="betters">
             <Tab eventKey="betters" title="Betters">
-              <RecipeList data={betters}/>
+              {
+                loadingBetter?
+                <pr> Loading data...</pr> :
+                <RecipeList recipes={betters}/>
+              }
             </Tab>
             <Tab eventKey="worstes" title="Worstes">
-              <RecipeList recipes={worstes}/>
+              {
+                  loadingWorstes?
+                  <pr> Loading data...</pr> :
+                  <RecipeList recipes={worstes}/>
+              }
             </Tab>
         </Tabs>
-      
       </Container>
     </div>
     </>
