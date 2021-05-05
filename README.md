@@ -1,6 +1,10 @@
-# Challenge Kitchen recipes SCV
 
-The main idea of this project is a web app to give an own kitchen recipes manage. 
+<h1 align="left">
+    <img src="https://github.com/Jhoandry/kitchen-secrets-api/blob/2666a56fd84e58f553e3e908731da23546b06286/public/logo.png" width="50">
+    Kitchen Secrest's by Jhoa
+</h1> 
+<h5> The main idea of this project is a web app to give an own kitchen recipes manage. </h5>
+
 
 ## Modules
 
@@ -28,3 +32,8 @@ To Start Server: `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+<h3 align="left">
+    🚨 IMPORTANT
+</h3>
+This project needs a back server running before, go to [this project](https://github.com/Jhoandry/kitchen-secrets-service) and follow the instructions to start up.
