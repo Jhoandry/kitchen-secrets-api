@@ -28,7 +28,7 @@ You will need [npm](https://www.npmjs.com/) and [node](https://www.npmjs.com/pac
 
 Clone down this repository: `git clone https://github.com/Jhoandry/kitchen-secrets-api.git`
 
-Go to folder: `cd /kitchen-secrets-api`
+Go to folder: `cd kitchen-secrets-api`
 
 Installation: `npm install` 
 
