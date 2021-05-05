@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #FEBD59 !important;
+    background-color: #fe6b5a !important;
     width: 100%;
 }
 .navbar img {
@@ -26,5 +26,5 @@
 }
 
 .nav-link:active, .nav-link:hover, .active {
-    color: #fe6b59 !important;
+    color: #FEBD59 !important;
 }

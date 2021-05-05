@@ -4,7 +4,7 @@
 }
 
 h1, h3, h4 {
-    color: #ab2d0b;
+    color: #c17168;
 }
 
 .detail {
@@ -23,9 +23,9 @@ h1, h3, h4 {
 input {
     width: 5% !important;
     margin: 2%;
-    color: #ab2d0b;
+    color: #c17168;
     border-radius: .25rem;
-    border: 1px solid #ab2d0b;
+    border: 1px solid #c17168;
 }
 
 .col-md-3, .col-md-2 {
