@@ -33,7 +33,6 @@ To Start Server: `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<h3 align="left">
-    🚨 IMPORTANT
-</h3>
+**🚨 IMPORTANT**
+
 This project needs a back server running before, go to [this project](https://github.com/Jhoandry/kitchen-secrets-service) and follow the instructions to start up.
